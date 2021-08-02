@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw">
+
+<head>
+    <style>
+        /* *{
+            margin:0;
+            padding: 0;
+        } */
+        .adbox{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* background: #eeeeee; */
+            border-bottom: 1px solid #eeeeee;
+            padding: 10px 0;
+
+        }
+        .d-flex{
+            display: flex;
+            align-items: center;
+        }
+
+        .logoimg{
+            object-fit: contain;
+            width: 55px;
+            height: 56px;
+            /* margin-left: 5px; */
+        }
+        .margin-sm{
+            margin: 0 20px 0 20px;
+        }
+        button{
+            color: white;
+            border: none;
+            background: #be435c;
+            padding: 2px 20px;
+            border-radius: 5px;
+            /* margin-right: 10px; */
+            
+        }
+        .fontfa-0{
+            font-family: "Microsoft JhengHei";
+        }
+        .fontsz-0{
+            line-height: 18px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .fontsz-0 i{
+            font-style: normal;
+            font-size: 12px;
+            line-height: 10px;
+        }
+
+
+        
+    </style>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.js "></script>
+
+
+</head>
+
+<body>
+    <div class="adbox">
+        <div class="d-flex">
+            <div class="imgbox">
+                <img src="#" alt="一張圖片" class="logoimg">
+            </div>
+            <span class="margin-sm fontfa-0 fontsz-0">123 APP <br /><i>下載APP!<br />加入會員領取新會員專屬禮包!</i></span>
+        </div>
+       
+        <button class="fontfa-0" type="button" id="Apple1" onclick="location.href='#'">下 載</button>
+        <button class="fontfa-0" type="button" id="Android1" onclick="location.href='#'">下 載</button>
+    </div>
+
+</body>
+<script type="text/javascript">
+    /*
+    * 智慧機瀏覽器版本資訊:
+    *
+    */
+    var browser = {
+    versions: function() {
+    var u = navigator.userAgent, app = navigator.appVersion;
+    return {//移動終端瀏覽器版本資訊 
+    trident: u.indexOf('Trident') > -1, //IE核心
+    presto: u.indexOf('Presto') > -1, //opera核心
+    webKit: u.indexOf('AppleWebKit') > -1, //蘋果、谷歌核心
+    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐核心
+    mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否為移動終端
+    ios: !!u.match(/\(i[^;] ;( U;)? CPU. Mac OS X/), //ios終端
+    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android終端或者uc瀏覽器
+    iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否為iPhone或者QQHD瀏覽器
+    iPad: u.indexOf('iPad') > -1, //是否iPad
+    webApp: u.indexOf('Safari') == -1 //是否web應該程式，沒有頭部與底部
+    };
+    }(),
+    language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+    //window.location="https://itunes.apple.com/xxx";
+    Android1.style.display='none'
+    }
+    else if (browser.versions.android) {
+    //window.location="http://xxx/xxx.apk";
+    Apple1.style.display='none'
+    }
+    // document.writeln("語言版本: "   browser.language);
+    // document.writeln(" 是否為移動終端: "   browser.versions.mobile);
+    // document.writeln(" ios終端: "   browser.versions.ios);
+    // document.writeln(" android終端: "   browser.versions.android);
+    // document.writeln(" 是否為iPhone: "   browser.versions.iPhone);
+    // document.writeln(" 是否iPad: "   browser.versions.iPad);
+    // document.writeln(navigator.userAgent);
+    </script>
